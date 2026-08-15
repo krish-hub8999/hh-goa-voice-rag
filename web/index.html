@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HH Goa Voice RAG</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <p class="eyebrow">HH Goa 2026 · Task 2</p>
+    <h1>Ask the corpus out loud.</h1>
+    <p class="lede">Speak or type a question. The system transcribes, retrieves evidence, checks grounding, and responds with citations.</p>
+    <section class="card controls">
+      <div class="row">
+        <button id="record">● Start recording</button>
+        <button id="stop" disabled>■ Stop & ask</button>
+        <span id="recording-state">Ready</span>
+      </div>
+      <div class="divider"><span>or type a question</span></div>
+      <form id="text-form">
+        <input id="query" maxlength="2000" placeholder="What is Goa known for?" autocomplete="off" />
+        <button type="submit">Ask</button>
+      </form>
+    </section>
+    <section id="result" class="card result hidden">
+      <div class="label">Transcript</div><p id="transcript">—</p>
+      <div class="label">Answer</div><p id="answer">—</p>
+      <button id="speak" class="secondary">🔊 Read answer aloud</button>
+      <div class="label sources-label">Evidence</div><div id="sources"></div>
+      <div id="timings" class="timings"></div>
+    </section>
+    <p id="error" class="error"></p>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
