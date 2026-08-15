@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+artifacts/index/
+artifacts/raw/
+artifacts/test-*/
+artifacts/*.jsonl
+data/cache/
+work/
+pytest-cache-files-*/
+*.log
+*.egg-info/
