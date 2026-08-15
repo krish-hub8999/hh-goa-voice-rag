@@ -38,7 +38,7 @@ if web_dir.exists():
     app.mount("/static", StaticFiles(directory=web_dir), name="static")
 
 
-@app.get("/", include_in_schema=False)
+@app.api_route("/", methods=["GET", "HEAD"], include_in_schema=False)
 async def index():
     return FileResponse(web_dir / "index.html")
 
