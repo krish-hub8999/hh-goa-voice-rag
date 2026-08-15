@@ -1,0 +1,13 @@
+{
+  "scope": "text -> guardrails -> embedding -> local vector retrieval -> extractive answer",
+  "queries": 8,
+  "samples": 80,
+  "warmup": "none; first request is included, repeat the command for steady-state numbers",
+  "target_ms": 200,
+  "p50_ms": 0.282,
+  "p70_ms": 0.304,
+  "p100_ms": 1.154,
+  "mean_ms": 0.333,
+  "measured_on": "local machine at benchmark runtime",
+  "note": "Sarvam network STT and optional hosted LLM generation are excluded from this local target."
+}
